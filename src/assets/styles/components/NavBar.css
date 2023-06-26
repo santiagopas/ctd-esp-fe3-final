@@ -1,0 +1,73 @@
+/* Navegacion */
+header {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+header nav {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
+	width: 100%;
+	font-weight: bold;
+	flex-wrap: wrap;
+}
+
+/* Btn para cambiar el color */
+label {
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: hsl(232, 100%, 11%);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+label::before,
+label::after {
+	content: "";
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	top: 3px;
+	left: 4px;
+	transition: 0.5s ease;
+}
+
+label::before {
+	background-color: hsl(48, 79%, 63%);
+}
+
+label::after {
+	background-color: hsl(232, 100%, 11%);
+	left: -65px;
+	transform: scale(0.00001);
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"]:checked+label::before {
+	background-color: hsl(39, 100%, 95%);
+	transform: translateX(20px);
+}
+
+input[type="checkbox"]:checked+label::after {
+	transform: translateX(75px) scale(1);
+}

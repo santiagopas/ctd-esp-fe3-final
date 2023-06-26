@@ -7,6 +7,11 @@ const Form = () => {
   return (
     <div>
       <form>
+        <input type="text" placeholder="Npmbre" />
+        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="Tel" />
+        <textarea placeholder="Mensaje"></textarea>
+        <button>Send</button>
       </form>
     </div>
   );

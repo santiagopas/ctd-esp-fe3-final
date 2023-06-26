@@ -26,7 +26,7 @@ git clone https://github.com/Frontend-III/fe3-final
 cd fe3-final
 
 # elimina los links al repositorio de DH
-git remove remote origin
+git remote remove origin
 
 # Agrega el link al repositorio de tu cuenta de github, reemplaza <tuusuario> por tu cuenta
 git remote add origin https://github.com/<tuusuario>/fe3-final
