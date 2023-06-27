@@ -7,11 +7,11 @@ const Form = () => {
   return (
     <div>
       <form>
-        <input type="text" placeholder="Npmbre" />
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Tel" />
-        <textarea placeholder="Mensaje"></textarea>
-        <button>Send</button>
+        <input type="text" placeholder="Juan" />
+        <input type="text" placeholder="juan@juan.com" />
+        <input type="text" placeholder="314253647" />
+        <textarea placeholder="Escribir aqui la consulta..."></textarea>
+        <button>Enviar</button>
       </form>
     </div>
   );
