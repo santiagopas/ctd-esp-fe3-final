@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Card from '../Components/Card';
 
 const Detail = () => {
 
@@ -21,7 +22,7 @@ const Detail = () => {
     };
 
     fetchUser();
-  }, []);
+  }, [ url]);
 
 
   if (!user) {
@@ -31,18 +32,10 @@ const Detail = () => {
 
   return (
     <>
-      <h1>Detail Dentist id:  {id}
-      </h1>
-      <div>
-        <h3>name:{user.name}
-        </h3>
-        <p>surName:</p>
-        <p>id: </p>
-        <img src="" alt="" width={200} />
-        <p>phone:</p>
-        <p>email:</p>
-        <p>website:</p>
-      </div>
+      <h1>Detail Dentist id:  {id} </h1>
+    <Card user={user}/>
+     
+  
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
 
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}

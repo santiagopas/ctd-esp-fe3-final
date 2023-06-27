@@ -3,7 +3,7 @@ import doctorsPhoto from "../../assets/helpers/doctorsPhoto";
 
 export const initialState = {
   theme: localStorage.getItem("theme") || "light",
-  data: [ ],
+  data: [],
   favs: JSON.parse(localStorage.getItem("favs")) || [],
 };
 
@@ -22,9 +22,14 @@ const reducer = (state, action) => {
         ...state, theme: action.payload
       }
     case 'data':
-      const data = { ...state, data: action.payload }
-      return data
-
+      const dataWithPhoto = action.payload.map((user, index) => ({
+        ...user,
+        photo: doctorsPhoto[index].photo,
+      }));
+      return {
+        ...state,
+        data: dataWithPhoto
+      };
     case 'addFav':
       localStorage.setItem('favs', JSON.stringify([...state.favs, action.payload]))
       return { ...state, favs: [...state.favs, action.payload] }
@@ -47,7 +52,7 @@ export const ContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
   const url = `https://jsonplaceholder.typicode.com/users`
-  
+
   const getList = async () => {
     try {
       const res = await fetch(url)
@@ -66,7 +71,7 @@ export const ContextProvider = ({ children }) => {
     const favsStorage = localStorage.getItem('favs') || "[]"
     localStorage.setItem('favs', favsStorage)
     getList()
-  }, [])
+  })
 
 
   return (

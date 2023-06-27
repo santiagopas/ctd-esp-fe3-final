@@ -1,0 +1,12 @@
+.userImg {
+/* esta es la imagen de background del perfil de usuario que se ve en la card */
+  width: 220px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+&:hover {
+  box-shadow: 0 0 0 2px #000;
+}
