@@ -1,4 +1,4 @@
-/* Navegacion */
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -23,9 +23,13 @@ nav ul {
 	width: 100%;
 	font-weight: bold;
 	flex-wrap: wrap;
+	gap: 1rem;
 }
 
-/* Btn para cambiar el color */
+nav ul li a:hover {
+	color: hsl(48, 79%, 63%);
+}
+
 label {
 	position: relative;
 	display: block;
