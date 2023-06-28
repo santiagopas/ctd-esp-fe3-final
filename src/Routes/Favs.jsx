@@ -10,7 +10,7 @@ const Favs = () => {
 
   const favorites = state.favs;
 
-  console.log(favorites);
+    
 
   return (
     <>

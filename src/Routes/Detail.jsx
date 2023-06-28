@@ -27,7 +27,7 @@ const Detail = () => {
 
   if (!user) {
     return <div>Loading...</div>;
-  } else { console.log(user) }
+  } 
 
 
   return (
