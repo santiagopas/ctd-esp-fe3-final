@@ -12,7 +12,12 @@
   margin-block-end: 0.9rem;
 }
 
+.favs-container>.card-grid{
+  height: 100%;
+  overflow-y: scroll;
+}
 .dark .favs-container {
+  background-color: #1a1a1a;
   color: #fff;
 }
 .dark .favs-container h2 {

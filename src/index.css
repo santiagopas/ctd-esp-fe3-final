@@ -6,7 +6,7 @@
   --fontRegular: 500;
   --fontBold: 700;
   --fontBlack: 900;
-  --colorDark: #2E2E2E;
+  --colorDark: #1a1a1a;
   --colorLight: #fafafa;
 
 }
@@ -85,10 +85,6 @@ a:hover {
 
 .dark a {
   color: var(--colorLight);
-}
-
-.dark .card {
-  border: 0.5px solid rgb(136, 136, 136);
 }
 
 .light {

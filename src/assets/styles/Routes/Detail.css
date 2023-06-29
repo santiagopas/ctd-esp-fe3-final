@@ -1,0 +1,63 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.detail-container>h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.detail-container>.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 50%;
+}
+
+.detail-container>.card-container>.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90%;
+  gap: 1rem;
+}
+
+.detail-container>.card-container>.user-info>.favIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+  cursor: inherit;
+}
+
+.detail-container>.card-container>.user-info>.favIcon>svg{
+  cursor: pointer;
+} 
+.detail-container>.card-container>.user-info>.contact-data {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.dark>.detail-container {
+  background-color: #1a1a1a;
+  color: #fafafa;
+}
+
+.dark>.detail-container>.card-container {
+  background-color: hsl(240, 10%, 16%);
+  color: #fafafa;
+}

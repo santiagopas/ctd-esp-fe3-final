@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { ContextGlobal } from "./utils/global.context";
 import "../assets/styles/components/Card.css";
-import { MdOutlineStarBorderPurple500, MdOutlineStarPurple500 } from "react-icons/md";
+import { MdOutlineStarBorderPurple500, MdOutlineStarPurple500, MdOutlineEmail, MdOutlinePhone, MdOutlineAccountCircle } from "react-icons/md";
 
 const Card = ({ user }) => {
   const { state, dispatch } = useContext(ContextGlobal);
+
+  const location = useLocation();
 
   const addFav = () => {
     console.log('Agregando a favoritos');
@@ -32,12 +34,25 @@ const Card = ({ user }) => {
           <p>{user.username}</p>
         </figure>
       </Link>
-      <div className="favIcon">
-        {isFav ? (
-          <MdOutlineStarPurple500 onClick={removeFav} className="favIcon" />
-        ) : (
-          <MdOutlineStarBorderPurple500 onClick={addFav} className="favIcon" />
-        )}
+      <div className="user-info">
+        {
+          location.pathname === `/user/${user.id}`
+          &&
+          (
+            <>
+              <p className="contact-data"><i className="contact-icon"><MdOutlineEmail /></i>{user.email}</p>
+              <p className="contact-data"><i className="contact-icon"><MdOutlinePhone/></i>{user.phone}</p>
+              <p className="contact-data"><i className="contact-icon"><MdOutlineAccountCircle/></i>{user.website}</p>
+            </>
+          )
+        }
+        <div className="favIcon">
+          {isFav ? (
+            <MdOutlineStarPurple500 onClick={removeFav} className="favIcon" />
+          ) : (
+            <MdOutlineStarBorderPurple500 onClick={addFav} className="favIcon" />
+          )}
+        </div>
       </div>
     </article>
   );

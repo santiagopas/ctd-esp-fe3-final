@@ -56,8 +56,8 @@ label.color-theme {
 	background-color: hsl(239, 48%, 32%);
 }
 
-label::before,
-label::after {
+.color-theme::before,
+.color-theme::after {
 	content: "";
 	position: absolute;
 	width: 20px;
@@ -68,11 +68,11 @@ label::after {
 	transition: 0.5s ease;
 }
 
-label::before {
+.color-theme::before {
 	background-color: hsl(44, 100%, 75%);
 }
 
-label::after {
+.color-theme::after {
 	background-color: hsl(239, 48%, 32%);
 	left: -50px;
 	transform: scale(0.00001);
@@ -91,17 +91,19 @@ input[type="checkbox"]:checked+label::after {
 	transform: translateX(75px) scale(1);
 }
 
-
+.dark>header {
+	background-color: hsl(240, 10%, 16%);
+}
 
 @media (max-width: 800px) {
 
-	label::before,
-	label::after {
+	.color-theme::before,
+	.color-theme::after {
 		left: 2px;
 		top: 2px;
 	}
 
-	label::after {
+	.color-theme::after {
 		left: -60px;
 	}
 }

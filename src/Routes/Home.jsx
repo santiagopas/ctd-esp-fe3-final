@@ -19,14 +19,14 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>Clínica OdontoPlus</h1>
+            <h1>Clínica Muelita</h1>
             <h2>Tu sonrisa en buenas manos</h2>
             <p>Expertos en cuidado dental. Un equipo altamente calificado y comprometido para ofrecerte un enfoque integral y personalizado.</p>
-            <a className='hero-btn' onClick={dentistas}>Nuestro equipo</a>
+            <a className='hero-btn' onClick={dentistas} href={dentistas}>Nuestro equipo</a>
           </div>
           <div className="hero-image">
             <figure>
-              <img src={heroImg} alt="" width={300} />
+              <img src={heroImg} alt="hero" width={300} />
             </figure>
           </div>
         </div>

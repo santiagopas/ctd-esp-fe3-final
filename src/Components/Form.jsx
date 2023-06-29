@@ -7,10 +7,13 @@ const Form = () => {
   return (
     <div className="form-container">
       <form>
+      <h3>Contacto</h3>
+      <label htmlFor="name">Nombre completo</label>
         <input type="text" placeholder="Juan" />
+        <label htmlFor="email">Correo electronico</label>
         <input type="text" placeholder="juan@juan.com" />
-        <input type="text" placeholder="314253647" />
-        <textarea placeholder="Escribir aqui la consulta..."></textarea>
+        <label htmlFor="msg">Consulta</label>
+        <textarea placeholder="Escribir aqui la consulta..."/>
         <button>Enviar</button>
       </form>
     </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Card from '../Components/Card';
+import '../assets/styles/Routes/Detail.css'
 
 const Detail = () => {
   const { id } = useParams();
@@ -26,20 +27,15 @@ const Detail = () => {
   }, [id, url, user]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <main className='detail-container'>Cargando...</main>;
   }
 
   return (
-    <>
-      <h1>Detail Dentist id: {id}</h1>
+    <main className='detail-container'>
+      <h1>Datos de {user.name}</h1>
+      <h3>Te proporcionamos la informacion necesaria para que te pongas en contacto con tu dentista de preferencia.</h3>
       <Card user={user} />
-      <div>
-        <h2>Name: {user.name}</h2>
-        <p>Email: {user.email}</p>
-        <p>Phone: {user.phone}</p>
-        <p>Website: {user.website}</p>
-      </div>
-    </>
+    </main>
   );
 };
 
