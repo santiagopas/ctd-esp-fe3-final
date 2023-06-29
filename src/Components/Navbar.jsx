@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useContext, useMemo, useEffect } from 'react';
+import { useContext, useMemo } from 'react';
 import { ContextGlobal } from './utils/global.context';
 import '../assets/styles/components/NavBar.css';
 import routes from '../routesConfig';
@@ -31,7 +31,7 @@ const Navbar = () => {
         </ul>
 
         <input type="checkbox" id="toggle" onClick={changeTheme} checked={theme === 'dark'} />
-        <label htmlFor="toggle" className='color-theme noche' />
+        <label htmlFor="toggle" className='color-theme noche'/>
       </nav>
     </header>
   );

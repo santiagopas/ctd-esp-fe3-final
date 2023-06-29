@@ -52,9 +52,10 @@ label.color-theme {
 	cursor: pointer;
 }
 
-.dark label.color-theme{
-	background-color: hsl(239, 58%, 43%);
+.dark label.color-theme {
+	background-color: hsl(239, 48%, 32%);
 }
+
 label::before,
 label::after {
 	content: "";
@@ -72,7 +73,7 @@ label::before {
 }
 
 label::after {
-	background-color: hsl(239, 58%, 43%);
+	background-color: hsl(239, 48%, 32%);
 	left: -50px;
 	transform: scale(0.00001);
 }
@@ -88,4 +89,19 @@ input[type="checkbox"]:checked+label::before {
 
 input[type="checkbox"]:checked+label::after {
 	transform: translateX(75px) scale(1);
+}
+
+
+
+@media (max-width: 800px) {
+
+	label::before,
+	label::after {
+		left: 2px;
+		top: 2px;
+	}
+
+	label::after {
+		left: -60px;
+	}
 }
