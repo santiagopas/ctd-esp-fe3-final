@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ContextGlobal } from "./utils/global.context";
 import "../assets/styles/components/Card.css";
-import { MdOutlineStarBorderPurple500,MdOutlineStarPurple500 } from "react-icons/md";
+import { MdOutlineStarBorderPurple500, MdOutlineStarPurple500 } from "react-icons/md";
 
 
 const Card = ({ user }) => {
@@ -31,25 +31,25 @@ const Card = ({ user }) => {
 
   return (
     <>
-      <div className="card">
-        <Link to={`/user/${user.id}`}><h3>{user.name}</h3>
-          <p>{user.username}</p>
-          <p>{user.id}</p>
-          <div className="userImg" style={{ backgroundImage: `url(${userPhoto})` }}
-          ></div>
+      <article className="card-container">
+        <Link to={`/user/${user.id}`}>
+
+          <figure>
+            <div className="userImg" style={{ backgroundImage: `url(${userPhoto})` }}></div>
+            <figcaption>
+              <h3>{user.name}</h3>
+            </figcaption>
+            <p>{user.username}</p>
+          </figure>
         </Link>
-        <p>{user.phone}</p>
-        <p>{user.email}</p>
-        <p>{user.website}</p>
-
-
-        {isFav ? (
-          <MdOutlineStarPurple500 onClick={removeFav} className="favIcon" />
-        ) : (
-          <MdOutlineStarBorderPurple500 onClick={addFav} className="favIcon" />
-        )}
-
-      </div>
+        <div className="favIcon">
+          {isFav ? (
+            <MdOutlineStarPurple500 onClick={removeFav} className="favIcon" />
+          ) : (
+            <MdOutlineStarBorderPurple500 onClick={addFav} className="favIcon" />
+          )}
+        </div>
+      </article>
     </>
   );
 };

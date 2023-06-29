@@ -2,35 +2,45 @@ import React, { useContext } from 'react';
 import { ContextGlobal } from '../Components/utils/global.context';
 import Card from '../Components/Card';
 import '../assets/styles/Routes/Home.css'
-
+import heroImg from '../assets/images/portada.png'
 const Home = () => {
 
   const { state } = useContext(ContextGlobal)
 
   const users = state.data;
 
+  const dentistas = () => {
+    const dentistsSection = document.getElementById('dentistas');
+    dentistsSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <main className='main-container'>
-      <section class="hero">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1 className='animated-text'>Clinica Muelita</h1>
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat aspernatur </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <section className="hero">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1>Clínica OdontoPlus</h1>
+            <h2>Tu sonrisa en buenas manos</h2>
+            <p>Expertos en cuidado dental. Un equipo altamente calificado y comprometido para ofrecerte un enfoque integral y personalizado.</p>
+            <a className='hero-btn' onClick={dentistas}>Nuestro equipo</a>
           </div>
-          {/* <div class="hero-image">
+          <div className="hero-image">
             <figure>
-             <img src=" " alt="" width={300} />
+              <img src={heroImg} alt="" width={300} />
             </figure>
-          </div> */}
+          </div>
         </div>
       </section>
-      <section className='card-grid'>
-        {users.map((user) => {
-          return (
-            <Card key={user.id} user={user} />
-          )
-        })}
+      <section id='dentistas'>
+        <h2>Nuestro equipo</h2>
+        <div className='card-grid'>
+
+          {users.map((user) => {
+            return (
+              <Card key={user.id} user={user} />
+            )
+          })}
+        </div>
       </section>
     </main>
   )
