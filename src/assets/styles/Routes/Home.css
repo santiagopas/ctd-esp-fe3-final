@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: #DEF0F4;
+  height: 100%;
 }
 
 .hero {
@@ -113,5 +114,22 @@
 
   .hero-content {
     flex-direction: column;
+    padding: 1rem;
   }
+}
+
+.dark .main-container {
+  background-color: #1a1a1a;
+}
+
+.dark .hero-text h1 {
+  color: #DEF0F4;
+} 
+
+.dark #dentistas {
+  background-color: #1a1a1a;
+}
+
+.dark .hero-text p {
+  color: #DEF0F4;
 }

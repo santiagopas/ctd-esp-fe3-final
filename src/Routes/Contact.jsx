@@ -1,14 +1,13 @@
-import React from 'react'
 import Form from '../Components/Form'
-
+import '../assets/styles/Routes/Contact.css'
 
 const Contact = () => {
   return (
-    <div>
+    <main className='contact-container'>
       <h2>Quieres saber mas?</h2>
       <p>Envianos tu consulta y te contactaremos</p>
       <Form />
-    </div>
+    </main>
   )
 }
 

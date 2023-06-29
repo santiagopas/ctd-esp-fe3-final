@@ -3,44 +3,44 @@ import { useParams } from 'react-router-dom'
 import Card from '../Components/Card';
 
 const Detail = () => {
-
-  const { id } = useParams()
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
+  const { id } = useParams();
   const url = `https://jsonplaceholder.typicode.com/users/${id}`;
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Para esto deberan usar el id que viene en el parametro dinamico de la URL
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await fetch(url);
         const data = await response.json();
         setUser(data);
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
     };
 
-    fetchUser();
-  }, [ url]);
+    if (!user) {
+      fetchUser();
+    }
+  }, [id, url, user]);
 
-
-  if (!user) {
+  if (loading) {
     return <div>Loading...</div>;
-  } 
-
+  }
 
   return (
     <>
-      <h1>Detail Dentist id:  {id} </h1>
-    <Card user={user}/>
-     
-  
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+      <h1>Detail Dentist id: {id}</h1>
+      <Card user={user} />
+      <div>
+        <h2>Name: {user.name}</h2>
+        <p>Email: {user.email}</p>
+        <p>Phone: {user.phone}</p>
+        <p>Website: {user.website}</p>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Detail
+export default Detail;

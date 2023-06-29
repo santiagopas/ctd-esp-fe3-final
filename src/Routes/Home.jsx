@@ -34,7 +34,6 @@ const Home = () => {
       <section id='dentistas'>
         <h2>Nuestro equipo</h2>
         <div className='card-grid'>
-
           {users.map((user) => {
             return (
               <Card key={user.id} user={user} />

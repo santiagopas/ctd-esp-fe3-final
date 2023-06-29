@@ -1,16 +1,24 @@
-
 header {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	justify-content: center;
 	align-items: center;
+	padding: 1rem;
 }
+
 header nav {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+}
+
+nav>.logo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -27,39 +35,45 @@ nav ul {
 }
 
 nav ul li a:hover {
-	color: hsl(48, 79%, 63%);
+	color: #4AC7B3;
+	background: linear-gradient(90deg, #4AC7B3 0%, #0091FC 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-label {
+label.color-theme {
 	position: relative;
 	display: block;
-	width: 80px;
-	height: 50px;
+	width: 60px;
+	height: 25px;
 	border-radius: 50px;
-	background-color: hsl(232, 100%, 11%);
+	background-color: hsl(191, 50%, 91%);
 	overflow: hidden;
 	cursor: pointer;
 }
 
+.dark label.color-theme{
+	background-color: hsl(239, 58%, 43%);
+}
 label::before,
 label::after {
 	content: "";
 	position: absolute;
-	width: 45px;
-	height: 45px;
+	width: 20px;
+	height: 20px;
 	border-radius: 50%;
 	top: 3px;
-	left: 4px;
+	left: 10px;
 	transition: 0.5s ease;
 }
 
 label::before {
-	background-color: hsl(48, 79%, 63%);
+	background-color: hsl(44, 100%, 75%);
 }
 
 label::after {
-	background-color: hsl(232, 100%, 11%);
-	left: -65px;
+	background-color: hsl(239, 58%, 43%);
+	left: -50px;
 	transform: scale(0.00001);
 }
 
