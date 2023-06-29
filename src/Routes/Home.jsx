@@ -8,7 +8,7 @@ const Home = () => {
   const { state } = useContext(ContextGlobal)
 
   const users = state.data;
-
+console.log(users);
   const dentistas = () => {
     const dentistsSection = document.getElementById('dentistas');
     dentistsSection.scrollIntoView({ behavior: 'smooth' });
