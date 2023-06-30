@@ -45,9 +45,9 @@ const reducer = (state, action) => {
 export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const url = `https://jsonplaceholder.typicode.com/users`;
-
+  
   useEffect(() => {
+    const url = `https://jsonplaceholder.typicode.com/users`;
     const getList = async () => {
       try {
         const res = await fetch(url);
