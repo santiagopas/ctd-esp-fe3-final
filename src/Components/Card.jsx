@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { ContextGlobal } from "./utils/global.context";
 import "../assets/styles/components/Card.css";
-import { MdOutlineStarBorderPurple500, MdOutlineStarPurple500, MdOutlineEmail, MdOutlinePhone, MdOutlineAccountCircle } from "react-icons/md";
+import { MdFavoriteBorder, MdFavorite, MdOutlineEmail, MdOutlinePhone, MdOutlineAccountCircle } from "react-icons/md";
 
 const Card = ({ user }) => {
   const { state, dispatch } = useContext(ContextGlobal);
@@ -48,9 +48,9 @@ const Card = ({ user }) => {
         }
         <div className="favIcon">
           {isFav ? (
-            <MdOutlineStarPurple500 onClick={removeFav} className="favIcon" />
+            <MdFavorite onClick={removeFav} className="favIcon" />
           ) : (
-            <MdOutlineStarBorderPurple500 onClick={addFav} className="favIcon" />
+            <MdFavoriteBorder onClick={addFav} className="favIcon" />
           )}
         </div>
       </div>

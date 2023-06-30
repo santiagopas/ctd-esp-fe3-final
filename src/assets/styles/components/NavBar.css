@@ -47,7 +47,8 @@ label.color-theme {
 	width: 60px;
 	height: 25px;
 	border-radius: 50px;
-	background-color: hsl(191, 50%, 91%);
+	/* background-color: hsl(191, 50%, 91%); */
+	background: linear-gradient(90deg, #4AC7B3 0%, #0091FC 100%);
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -73,7 +74,8 @@ label.color-theme {
 }
 
 .color-theme::after {
-	background-color: hsl(239, 48%, 32%);
+	/* background-color: hsl(239, 48%, 32%); */
+	background: linear-gradient(90deg, #4AC7B3 0%, #0091FC 100%);
 	left: -50px;
 	transform: scale(0.00001);
 }

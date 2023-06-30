@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  margin-block: 2rem;
 }
 .dark>.contact-container{
   background-color: #1a1a1a;

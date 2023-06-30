@@ -38,6 +38,7 @@
   width: 100%;
   background: transparent;
   cursor: inherit;
+  border: none;
 }
 
 .detail-container>.card-container>.user-info>.favIcon>svg{
