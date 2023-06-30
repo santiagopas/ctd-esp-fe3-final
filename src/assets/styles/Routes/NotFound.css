@@ -34,3 +34,8 @@
   color: #fafafa;
 }
 
+@media screen and (max-width: 768px) {
+  .not-found-content {
+    width: 80%;
+  }
+}

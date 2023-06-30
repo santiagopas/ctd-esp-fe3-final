@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   margin-block: 2rem;
+  padding: 1rem;
 }
 .dark>.contact-container{
   background-color: #1a1a1a;

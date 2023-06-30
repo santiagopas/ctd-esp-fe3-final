@@ -6,11 +6,24 @@
     gap: 1rem;
     padding: 1rem;
     background-color: rgba(3, 3, 3, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
-    height: 50%;
-    width: 50%;
+    height: 100vh;
     margin-block: 2rem;
     text-align: center;
+    padding: 1rem;
+}
+
+.success-msg-container h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fafafa;
+}
+
+.success-msg-container p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fafafa;
 }
 
 .error-msj {

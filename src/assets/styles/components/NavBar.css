@@ -47,7 +47,6 @@ label.color-theme {
 	width: 60px;
 	height: 25px;
 	border-radius: 50px;
-	/* background-color: hsl(191, 50%, 91%); */
 	background: linear-gradient(90deg, #4AC7B3 0%, #0091FC 100%);
 	overflow: hidden;
 	cursor: pointer;
@@ -108,4 +107,11 @@ input[type="checkbox"]:checked+label::after {
 	.color-theme::after {
 		left: -60px;
 	}
+}
+
+@media (max-width: 768px) {
+	nav ul {
+		font-size: 12px;
+	}
+
 }

@@ -95,6 +95,7 @@
 .card-grid {
   display: grid;
   justify-items: center;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1.5rem;
   width: 100%;
