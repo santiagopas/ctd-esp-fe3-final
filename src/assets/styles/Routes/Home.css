@@ -138,3 +138,24 @@
 .dark #dentistas>h2{
   color: #DEF0F4;
 }
+
+.back-to-top{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #4AC7B3 0%, #0091FC 100%);
+  color: #DEF0F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-top>svg{
+  width: 2.5rem;
+  height: 2.5rem;
+}

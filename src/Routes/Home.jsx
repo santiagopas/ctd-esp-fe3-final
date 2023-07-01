@@ -3,6 +3,7 @@ import { ContextGlobal } from '../Components/utils/global.context';
 import Card from '../Components/Card';
 import '../assets/styles/Routes/Home.css'
 import heroImg from '../assets/images/portada.png'
+import { MdArrowCircleUp } from "react-icons/md";
 const Home = () => {
 
   const { state } = useContext(ContextGlobal)
@@ -13,6 +14,10 @@ const Home = () => {
     const dentistsSection = document.getElementById('dentistas');
     dentistsSection.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const backToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   return (
     <main className='main-container'>
@@ -40,6 +45,7 @@ const Home = () => {
             )
           })}
         </div>
+      <span onClick={backToTop} className='back-to-top'><MdArrowCircleUp/></span>
       </section>
     </main>
   )
